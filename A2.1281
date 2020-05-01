@@ -1,0 +1,12 @@
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var subtractProductAndSum = function(n) {
+    var nums = n.toString().split("");
+    nums = nums.map(i=>parseInt(i));
+    var sum = nums.reduce((acc,cur)=>acc+cur);
+    var digit = nums.reduce((acc,cur)=>acc*cur);
+    var result = digit -sum;
+    return result;
+};
